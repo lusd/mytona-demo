@@ -1,0 +1,29 @@
+.error {
+  width: 100%;
+  padding: 50px 15px;
+  height: auto;
+  background-color: #F0F0F0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error img {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.message {
+  color: #212529;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.back {
+  padding: 5px 15px;
+  background: #007bff;
+  color: white;
+  border-radius: 7px;
+  font-weight: bold;
+  font-size: 2em;
+}

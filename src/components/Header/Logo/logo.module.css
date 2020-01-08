@@ -1,0 +1,29 @@
+.logo {
+  width: auto;
+  margin-left: 5px;
+}
+
+.logoName {
+  display: none;
+}
+
+.logoBlock {
+}
+
+@media only screen and (max-width: 1199px) {
+  .logoName {
+    display: inline-block;
+    color: #404040;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1em;
+    margin-left: 12px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .logo {
+    height: 30px;
+    width: 30px;
+  }
+  
+}

@@ -1,0 +1,30 @@
+.pagination span {
+  padding: 0 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.activePage {
+  color: #2c7ebc;
+}
+
+.normalPage {
+  color: #333;
+}
+
+@media only screen and (max-width: 575px) {
+  .pagination {
+    justify-content: center;
+  }
+
+  .pagination span {
+    font-size: 1.3em;
+    padding: 0 3px;
+  }
+}

@@ -1,69 +1,47 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+npm start for starting the project.
 
-## Available Scripts
+This is React Application.
 
-In the project directory, you can run:
+Для стейт менеджмента используется Redux;
+Для запросов на внешний сервер используется Axios и Redux-thunk;
+Доступ к Store настроен через React-redux;
+Роутинг настроен через React-router-dom;
 
-### `yarn start`
+В папке “api” находится функция доступа к внешнему API.
+В папке “assets” хранятся изображения.
+В папке “components” находятся компоненты.
+В папке “redux” находятся редюсеры и стор.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Проект состоит из трех основных блоков - Header, Content, Footer.
+Content состоит из Slider и Characters.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Header:
+* В Header реализован роутинг по всему приложению, а так же страница 404 если URL не правильный.
+* Кнопка ENG / РУС меняет язык, подхватывая его из стейта.
+* Для планшетов и мобильных устройств предусмотрено гамбургер меню.
+* Сохранена анимация открывания / закрывания меню.
+* Верстка выполнена с использованием flexbox;
 
-### `yarn test`
+Slider:
+* Слайдер библиотеки бутстрап4.
+* Изображения меняются в зависимости от  разрешения экрана устройства.
+* Caption меню сохранено в той же цветовой стилистике.
+* На третьем слайде изображение названия игры меняеться в зависимсти от языка.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Characters:
+* Данные приходят с помощью запроса GraphQL (с использованием axios), было бы логичнее строить приложение на Apollo клиенте, но я уже написал/настроил весь BLL и DAL уровень на стеке redux / react-redux.
+* Задействован middleWare (санка) чтобы получить данные и отрисовать компоненту заново.
+* Компонента обернута классовой компонентой для простоты доступа к жизненным циклам.
+* Внутри используются функциональные компоненты с локальным стейтом.
+* Кнопка Show More Characters показывает 20 персонажей вместо 4.
+* Пагинация переключает страницы, полученные с сервера. Имеется возможность посмотреть всех персонажей.
+* Карточки персонажей имеют ховер эффект и адаптивны под мобильные устройства и планшеты.
+* В верстке используется микс гридов и флекбокса
 
-### `yarn build`
+Footer:
+* Сверстан с использованием grid-template
+* Адаптивен под мобильные устройства
+* Меняет язык в зависимости от языка сайта
+* Переиспользует компоненту <Social /> из <Header />
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# mytona
+Буду рад услышать фидбэк.

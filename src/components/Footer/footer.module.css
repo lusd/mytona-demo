@@ -1,0 +1,137 @@
+.footer {
+  width: 100%;
+  background: #fbfbfb;
+  padding-top: 30px;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: grid;
+  grid-template:
+   "logo  ...  social   social" 75px
+   "sites ...  contacts confidential"
+   "copy copy  copy     copy"
+   /1fr  1fr   1fr      1fr
+ ;
+  grid-gap: 10px;
+}
+
+.logo__block {
+  padding: 10px 15px 30px;
+  min-height: 75px;
+  grid-area: logo;
+}
+
+.social__block {
+  min-height: 75px;
+  padding: 10px 15px 30px;
+  grid-area: social;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sites__block {
+  padding-left: 15px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em;
+  line-height: 1.8em;
+  grid-area: sites;
+}
+
+.contacts__block {
+  padding-left: 15px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em;
+  line-height: 1.8em;
+  grid-area: contacts;
+}
+
+.confidential__block {
+  padding-left: 15px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em;
+  line-height: 1.8em;
+  grid-area: confidential;
+}
+
+.footer__logo {
+  height: 35px;
+  width: auto;
+}
+
+.title {
+  color: #808080;
+}
+
+.link {
+  text-decoration: none;
+  color: #404040;
+}
+
+.link__light {
+  color: #dddddd;
+}
+
+.footer .social__block {
+  display: flex;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: #037EBC;
+  cursor: pointer;
+}
+
+.copyright {
+  color: #808080;
+  font-size: 1.2em;
+  line-height: 1.8em;
+  grid-area: copy;
+  margin: 15px 0;
+  padding-left: 15px;
+}
+
+@media only screen and (max-width: 767px) {
+  .wrap {
+    max-width: 540px;
+    font-size: 1.8em;
+    grid-template:
+     "logo" 75px
+     "social"
+     "sites"
+     "contacts"
+     "confidential"
+     "copy"
+     /1fr
+   ;
+  }
+
+  .link {
+    font-size: 16px;
+  }
+
+  .copyright {
+    font-size: 13px;
+  }
+
+  .title {
+    font-size: 1em;
+    color: #101010;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .social__block {
+    padding-left: 0;
+    justify-content: flex-start;
+  }
+}

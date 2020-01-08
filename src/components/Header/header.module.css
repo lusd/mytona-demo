@@ -1,0 +1,119 @@
+.header {
+  background: #FBFBFB;
+  color: #404040;
+  padding: 6px 10px;
+  min-height: 47px;
+  font-size: 1.8em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigationWrap {
+  display: flex;
+  width: 100%;
+}
+
+.mobileButton {
+  display: none;
+}
+
+.navigation__logo {
+  display: none;
+}
+
+.social__wrap {
+  display: none;
+}
+
+@media only screen and (max-width: 1199px) {
+  .header {
+    justify-content: space-between;
+  }
+
+  .social__wrap {
+    margin-left: 50px;
+    margin-top: 15px;
+    display: flex;
+    width: 100%;
+    padding: 15px 15px 55px 0px;
+  }
+
+  .header__top {
+    width: 100%;
+  }
+
+  .navigation__logo {
+    display: block;
+    align-self: center;
+    height: 40px;
+    margin-bottom: 50px;
+    width: 160px;
+  }
+
+  .mobileButton {
+    display: inline-block;
+    cursor: pointer;
+    z-index: 12;
+    position: relative;
+    padding-right: 5px;
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 27px;
+    height: 2px;
+    background-color: #101010;
+    margin: 5px 0;
+    transition: 0.4s;
+    border-radius: 1px;
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-5px, 5px);
+  }
+
+  .change .bar2 {opacity: 0;}
+
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
+
+  .navigationWrap {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    z-index: 20;
+    background: #fbfbfb ;
+    display: none;
+    background-image: url('./../../assets/framegray.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: height linear 0.45s;
+  }
+
+  .navigationWrap.active {
+    display: flex;
+  }
+
+  .header.active {
+    padding-top: 9px;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .navigationWrap.height {
+    height: 590px;
+  }
+}

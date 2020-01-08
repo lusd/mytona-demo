@@ -1,0 +1,22 @@
+.language {
+  text-align: center;
+  font-weight: bold;
+  margin-left: 50px;
+}
+
+.link {
+  cursor: pointer;
+  text-decoration: none;
+  color: #404040;
+}
+
+.link:hover {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1199px) {
+  .link {
+    font-size: 1.56em;
+    padding: 0 5px;
+  }
+}

@@ -1,0 +1,11 @@
+.social {
+  display: flex;
+  max-width: 265px;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.social__link img {
+  width: 28px;
+  height: 28px;
+}
