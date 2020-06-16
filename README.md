@@ -1,3 +1,5 @@
+npm install for installing dependencies. 
+
 npm start for starting the project.
 
 This is React Application.
