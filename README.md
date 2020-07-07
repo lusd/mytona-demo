@@ -1,3 +1,5 @@
+npm install for installing dependencies. 
+
 npm start for starting the project.
 
 This is React Application.
@@ -42,6 +44,4 @@ Footer:
 * Сверстан с использованием grid-template
 * Адаптивен под мобильные устройства
 * Меняет язык в зависимости от языка сайта
-* Переиспользует компоненту <Social /> из <Header />
-
-Буду рад услышать фидбэк.
+* Переиспользует компоненту Social из Header
