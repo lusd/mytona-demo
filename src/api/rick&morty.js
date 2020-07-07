@@ -1,11 +1,14 @@
 import * as axios from 'axios';
 
+
+
 export const rickAPI = {
   getCharacters(page){
     return (
       axios({
         url: 'https://rickandmortyapi.com/graphql/',
         method: 'post',
+        withCredentials: true,
         data: {
           query: `
             query {
